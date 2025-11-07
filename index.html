@@ -9,25 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script>
-        // Tailwind Custom Configuration (Blue/White Theme, Fonts)
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#2563EB', // A nice, clean blue
-                        'light-blue': '#EFF6FF',
-                    },
-                    fontFamily: {
-                        'sans': ['Poppins', 'sans-serif'],
-                    },
-                    borderRadius: {
-                        'xl': '1rem',
-                    }
+   <script>
+    // Tailwind Custom Configuration (Blue/White Theme, Fonts)
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary-blue': '#2563EB', // A nice, clean blue
+                    'light-blue': '#EFF6FF',
+                },
+                fontFamily: {
+                    'sans': ['Poppins', 'sans-serif'],
+                },
+                borderRadius: {
+                    'xl': '1rem',
                 }
             }
+        },
+        // ⭐️ ADD THIS BLOCK FOR CUSTOM CLASS VARIANTS ⭐️
+        variants: {
+            extend: {
+                // Allows the opacity utility (like opacity-100) to be applied
+                // when the element's parent has the 'active-touch' class.
+                opacity: ['active-touch'], 
+            }
         }
-    </script>
+    }
+</script>
 </head>
 <body class="bg-white text-gray-800 antialiased font-sans">
 
@@ -196,7 +204,7 @@
                         class="w-full h-60 object-cover"
                         >
                         
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6">
                             <h3 class="text-2xl font-bold text-white mb-2">SALFORD & CO.</h3>
                             <p class="text-white text-center mb-4">Generated copy and visuals for a product launch using advanced Prompt Engineering techniques.</p>
                             <a  href="Graphic_Design_Conversation.pdf" target="_blank"  class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
@@ -209,7 +217,7 @@
                         alt="Screenshot of AI Marketing Campaign Project" 
                         class="w-full h-60 object-cover"
                         >
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6">
                             <h3 class="text-2xl font-bold text-white mb-2">Corporate Branding Kit</h3>
                             <p class="text-white text-center mb-4">Full graphic design suite: logo, stationery, and social media templates.</p>
                             <a href="COP.jpg" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
@@ -222,7 +230,7 @@
                         alt="Screenshot of AI Marketing Campaign Project" 
                         class="w-full h-60 object-cover"
                         >
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6">
                             <h3 class="text-2xl font-bold text-white mb-2">Self-Help E-book Tips</h3>
                             <p class="text-white text-center mb-4">Essential Steps to Craft Beautiful and Captivating Prompts for AI Design</p>
                             <a href="Tips_for_a_Good_Ebook_Cover_Colored_Elliot_Quason_Amoah.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
@@ -235,7 +243,7 @@
                         alt="Screenshot of AI Marketing Campaign Project" 
                         class="w-full h-60 object-cover"
                         >
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6">
                             <h3 class="text-2xl font-bold text-white mb-2">The ABC of Copyrighting</h3>
                             <p class="text-white text-center mb-4">Essentials for Copyrighting - Hints and tips, tone of voice and psychological techniques.</p>
                             <a href="TheABCofCopywriting.pdf" target="_blank"  class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
@@ -248,7 +256,7 @@
                         alt="Screenshot of AI Marketing Campaign Project" 
                         class="w-full h-60 object-cover"
                         >
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6"">
                             <h3 class="text-2xl font-bold text-white mb-2">Lead Generation Funnel</h3>
                             <p class="text-white text-center mb-4">Design and implementation of a high-converting digital marketing funnel.</p>
                             <a href="Lead_Generation_Funnel_Ebook_Elliot_Quason_Amoah.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
@@ -261,7 +269,7 @@
                         alt="Screenshot of AI Marketing Campaign Project" 
                         class="w-full h-60 object-cover"
                         >
-                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 **active-touch:opacity-100** transition-opacity duration-500 flex flex-col justify-center items-center p-6">
                             <h3 class="text-2xl font-bold text-white mb-2">AI Workflow Training</h3>
                             <p class="text-white text-center mb-4">Conducted a private training session for a tech company on integrating AI tools.</p>
                             <a href="AI.jpg" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
