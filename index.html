@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliots's Multi-disciplinary Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script>
+        // Tailwind Custom Configuration (Blue/White Theme, Fonts)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#2563EB', // A nice, clean blue
+                        'light-blue': '#EFF6FF',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-primary-blue">EQA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-gray-600 hover:text-primary-blue transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary-blue transition duration-300">About</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary-blue transition duration-300">Services</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-primary-blue transition duration-300">Portfolio</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary-blue transition duration-300">Testimonials</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary-blue transition duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-primary-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+            <a href="#hero" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">Home</a>
+            <a href="#about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">About</a>
+            <a href="#services" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">Services</a>
+            <a href="#portfolio" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">Portfolio</a>
+            <a href="#testimonials" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">Testimonials</a>
+            <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-light-blue">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="py-24 md:py-32 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                    <div class="md:w-1/2" data-aos="fade-right">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-4">
+                            Hello, I’m <span class="text-primary-blue">Elliot Quason Amoah</span> — Multi-disciplinary Creator.
+                        </h1>
+                        <p class="text-xl sm:text-2xl font-medium text-gray-600 mb-6">
+                            Prompt Engineer | Graphic Designer | E-book Editor | Digital Marketer | Video Editor | AI Educator.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8 max-w-lg">
+                            I leverage a unique blend of creativity and technology to deliver impactful digital solutions. My expertise spans design, marketing strategy, and advanced AI utilization to help businesses and individuals thrive in the digital landscape.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="px-8 py-3 text-lg font-semibold text-white bg-primary-blue rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 text-center">
+                                Contact Me
+                            </a>
+                            <a href="MyCv.pdf" target="_blank" class="px-8 py-3 text-lg font-semibold text-primary-blue bg-white border-2 border-primary-blue rounded-xl shadow-md hover:bg-light-blue transition duration-300 text-center">
+                            View CV
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] bg-gray-200 rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
+                            <img 
+            src="image1.png" 
+            alt="[Your Name] professional portrait" 
+            class="object-cover w-full h-full object-[50%_20%]"
+        >
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">About Me</h2>
+                <div class="h-1 w-20 bg-primary-blue mx-auto mb-16 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">My Journey & Values</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Starting as a design enthusiast, my path quickly evolved to embrace the power of "AI and digital strategy". I believe in continuous learning, transparent communication, and delivering measurable results. My core value is creating meaningful impact for my clients, bridging the gap between innovative ideas and flawless execution.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            I thrive on solving complex problems with simple, elegant solutions, ensuring every project is not just completed, but optimized for success. Let's build something exceptional together!
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Key Skills</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">💡</span> <p class="font-medium text-gray-800">Prompt Engineering</p>
+                            </div>
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">📐</span>
+                                <p class="font-medium text-gray-800">Graphic Design</p>
+                            </div>
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">✍️</span>
+                                <p class="font-medium text-gray-800">E-book Editing</p>
+                            </div>
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">📈</span>
+                                <p class="font-medium text-gray-800">Digital Marketing</p>
+                            </div>
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">🎬</span>
+                                <p class="font-medium text-gray-800">Video Editing</p>
+                            </div>
+                            <div class="bg-light-blue p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                                <span class="text-4xl text-primary-blue mb-2 block">🤖</span>
+                                <p class="font-medium text-gray-800">AI Education</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">My Services</h2>
+                <div class="h-1 w-20 bg-primary-blue mx-auto mb-16 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+                        <span class="text-5xl text-primary-blue mb-4 block">💡</span>
+                        <h3 class="text-xl font-semibold mb-3">Prompt Engineering</h3>
+                        <p class="text-gray-700 mb-4">Mastering communication with AI models to extract high-quality, precise, and relevant outputs for creative and technical tasks.</p>
+                        
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+                        <span class="text-5xl text-primary-blue mb-4 block">📐</span>
+                        <h3 class="text-xl font-semibold mb-3">Graphic Design</h3>
+                        <p class="text-gray-700 mb-4">Creating impactful visual identities, marketing materials, and digital assets that resonate with your brand's voice and audience.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="300">
+                        <span class="text-5xl text-primary-blue mb-4 block">✍️</span>
+                        <h3 class="text-xl font-semibold mb-3">E-book Editing</h3>
+                        <p class="text-gray-700 mb-4">Comprehensive editing, formatting, and layout design to produce professional, reader-friendly, and publish-ready e-books.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="400">
+                        <span class="text-5xl text-primary-blue mb-4 block">📈</span>
+                        <h3 class="text-xl font-semibold mb-3">Digital Marketing</h3>
+                        <p class="text-gray-700 mb-4">Developing and executing data-driven strategies across SEO, social media, and paid ads to maximize your online reach and ROI.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="500">
+                        <span class="text-5xl text-primary-blue mb-4 block">🎬</span>
+                        <h3 class="text-xl font-semibold mb-3">Video Editing</h3>
+                        <p class="text-gray-700 mb-4">Producing engaging, polished videos for social media, courses, and presentations, from raw footage to final captivating cut.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-aos="zoom-in" data-aos-delay="600">
+                        <span class="text-5xl text-primary-blue mb-4 block">🤖</span>
+                        <h3 class="text-xl font-semibold mb-3">AI Education</h3>
+                        <p class="text-gray-700 mb-4">Workshops and personalized training on utilizing AI tools (like Midjourney, ChatGPT, etc.) to boost productivity and creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">Recent Projects</h2>
+                <div class="h-1 w-20 bg-primary-blue mx-auto mb-16 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img 
+                         src="cover2.jpg" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">SALFORD & CO.</h3>
+                            <p class="text-white text-center mb-4">Generated copy and visuals for a product launch using advanced Prompt Engineering techniques.</p>
+                            <a  href="Graphic_Design_Conversation.pdf" target="_blank"  class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img 
+                         src="cover3.jpg" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Corporate Branding Kit</h3>
+                            <p class="text-white text-center mb-4">Full graphic design suite: logo, stationery, and social media templates.</p>
+                            <a href="COP.jpg" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <img 
+                         src="cover4.jpg.avif" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Self-Help E-book Tips</h3>
+                            <p class="text-white text-center mb-4">Essential Steps to Craft Beautiful and Captivating Prompts for AI Design</p>
+                            <a href="Tips_for_a_Good_Ebook_Cover_Colored_Elliot_Quason_Amoah.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                        <img 
+                         src="cover5.jpg" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">The ABC of Copyrighting</h3>
+                            <p class="text-white text-center mb-4">Essentials for Copyrighting - Hints and tips, tone of voice and psychological techniques.</p>
+                            <a href="TheABCofCopywriting.pdf" target="_blank"  class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img 
+                         src="cover7.jpg.avif" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Lead Generation Funnel</h3>
+                            <p class="text-white text-center mb-4">Design and implementation of a high-converting digital marketing funnel.</p>
+                            <a href="Lead_Generation_Funnel_Ebook_Elliot_Quason_Amoah.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                        <img 
+                         src="cover6.jpg.avif" 
+                        alt="Screenshot of AI Marketing Campaign Project" 
+                        class="w-full h-60 object-cover"
+                        >
+                        <div class="absolute inset-0 bg-primary-blue bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">AI Workflow Training</h3>
+                            <p class="text-white text-center mb-4">Conducted a private training session for a tech company on integrating AI tools.</p>
+                            <a href="AI.jpg" target="_blank" class="px-4 py-2 text-sm font-semibold text-primary-blue bg-white rounded-lg hover:bg-gray-100 transition duration-300">View Project</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-24 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">What Clients Say</h2>
+                <div class="h-1 w-20 bg-primary-blue mx-auto mb-16 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-blue" data-aos="flip-up" data-aos-delay="100">
+                        <p class="italic text-lg text-gray-700 mb-6">"The results were outstanding. Elliot's prompt engineering boosted our AI-generated content quality by over 40%. Truly a multi-disciplinary genius."</p>
+                        <p class="font-semibold text-gray-900">— Nii Stephens, Data Analyst</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-blue" data-aos="flip-up" data-aos-delay="200">
+                        <p class="italic text-lg text-gray-700 mb-6">"The design work was clean, modern, and exactly what we needed. The project was delivered ahead of schedule and communication was flawless.Thank you so much for sharing the flyer with me and so promptly"</p>
+                        <p class="font-semibold text-gray-900">— Dr. Nelly Okine, Marketing Director for Salford and Co.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary-blue" data-aos="flip-up" data-aos-delay="300">
+                        <p class="italic text-lg text-gray-700 mb-6">"From a rough manuscript to a professional e-book, the transformation was incredible. Highly recommend the editing and formatting service!"</p>
+                        <p class="font-semibold text-gray-900">— David L., Author & Educator</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">Get In Touch</h2>
+                <div class="h-1 w-20 bg-primary-blue mx-auto mb-16 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+
+                <form id="contactForm" action="https://formspree.io/f/xdkpqqgq" method="POST" class="bg-light-blue p-8 sm:p-12 rounded-xl shadow-2xl" >
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300" placeholder="Your Name">
+                            <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Name is required.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300" placeholder="your.email@example.com">
+                            <p id="emailError" class="text-red-500 text-sm mt-1 hidden">A valid email is required.</p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300" placeholder="Tell me about your project..."></textarea>
+                            <p id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required.</p>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <button type="submit" class="w-full px-8 py-3 text-lg font-semibold text-white bg-primary-blue rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-blue-300">
+                                Send Message
+                            </button>
+                        </div>
+                        <p id="formStatus" class="text-center mt-4 hidden text-green-600 font-medium"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+    
+    <a href="https://x.com/KayBest32535371" target="_blank" class="text-gray-400 hover:text-primary-blue transition duration-300 text-3xl" aria-label="Visit my X profile">
+        <i class="fab fa-x-twitter"></i> 
+    </a>
+    
+    <a href="https://www.instagram.com/kay_is_best/" target="_blank" class="text-gray-400 hover:text-primary-blue transition duration-300 text-3xl" aria-label="Visit my Instagram profile">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <a href="https://www.snapchat.com/add/kayelliot122" target="_blank" class="text-gray-400 hover:text-primary-blue transition duration-300 text-3xl" aria-label="Visit my Snapchat profile">
+        <i class="fab fa-snapchat-ghost"></i>
+    </a>
+    
+    <a href="https://wa.me/233544681316" target="_blank" class="text-gray-400 hover:text-primary-blue transition duration-300 text-3xl" aria-label="Chat with me on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+            <p class="text-gray-400">&copy; <span id="currentYear"></span> Elliot Quason Amoah. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
